@@ -1,0 +1,179 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Survey Form </title>
+    <link rel="stylesheet" href="css/survey-form.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,300&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header__container">
+            <div class="header__nav">
+                <p>Profile Survey Form</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+
+            <div id="intro__section">
+                <h1 id="title">Udhailiyah Survey Form</h1>
+                <p id="description">Thank you for taking the time to help us improve the platform</p>
+            </div>
+
+            <form id="survey-form" method="post" name="google-sheet">
+
+                <div class="form__group">
+                    <label id="name-label" class="form__label" for="name">Name</label>
+                    <input id="name" class="form__control" type="text" name="name" placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div class="form__group">
+                    <label id="email-label" class="form__label" for="email">Email</label>
+                    <input id="email" class="form__control" type="email" name="email" placeholder="Enter your Email"
+                        required>
+                </div>
+
+                <div class="form__group">
+                    <label id="number-label" class="form__label" for="age">Age <span
+                            class="clue">(optional)</span></label>
+                    <input id="number" class="form__control" type="number" min="10" max="99" name="age"
+                        placeholder="Age">
+                </div>
+
+                <div class="form__group">
+                    <p class="p__desc">Which option best describes your current role?</p>
+                    <select id="dropdown" class="form__control" name="role" required>
+                        <option disabled selected value> Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="job">Full Time Job</option>
+                        <option value="learner">Full Time Learner</option>
+                        <option value="preferNo">Prefer not so say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <p class="p__desc">Would you recommend more surveys like this?</p>
+                    <label><input class="input-radio" name="user-recommend" value="definitely" type="radio"
+                            checked>Definitely</label>
+                    <label><input class="input-radio" name="user-recommend" value="maybe" type="radio">Maybe</label>
+                    <label><input class="input-radio" name="user-recommend" value="not-sure" type="radio">Not
+                        sure</label>
+
+                </div>
+
+                <div class="form__group">
+                    <p class="p__desc">What is your favorite feature of Udhaiyah?</p>
+                    <select id="most-like" class="form__control" name="mostLike" required>
+                        <option disabled selected value> Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="openSource">Open Source</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <p class="p__desc"> What would you like to see improved? <span class="clue">(Check all that
+                            apply)</span></p>
+                    <label>
+                        <input class="input-checkbox" name="prefer_1" value="front-end-projects"
+                            type="checkbox">Front-end
+                        Projects
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_2" value="back-end-projects" type="checkbox">Back-end
+                        Projects
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_3" value="data-visualization" type="checkbox">Data
+                        Visualization
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_4" value="challenges" type="checkbox">Challenges
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_5" value="open-source-community" type="checkbox">Open
+                        Source Community
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_6" value="gitter-help-rooms" type="checkbox">Gitter
+                        help
+                        rooms
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_7" value="videos" type="checkbox">Videos
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_8" value="city-meetups" type="checkbox">City Meetups
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_9" value="wiki" type="checkbox">Wiki
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_10" value="forum" type="checkbox">Forum
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="prefer_11" value="additional-courses"
+                            type="checkbox">Additional
+                        Courses
+                    </label>
+                </div>
+
+                <div class="form__group">
+                    <p class="p__desc">Any comments or suggestions?</p>
+                    <textarea id="comments" class="input-textarea" name="comment"
+                        placeholder="Enter your comment here..."></textarea>
+                </div>
+
+                <div class="form__group">
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+
+            <div id="advice">
+                <p> </p>
+            </div>
+
+            <footer>
+                <div class="footer__container">
+                    <div class="footer__content">
+                        <p>Thanks for Your Time</p>
+                    </div>
+                    <div class="github__icon">
+                        <a href="https://github.com/mattcastells" alt="myGitHub">
+
+                    </div>
+            </footer>
+
+        </main>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwEwXfwGQdny29nsG7CQNwcCsGmyif1mgI8-UJ3oaaKZwAsRLtZ61wp8ewivvZRSFjK/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
